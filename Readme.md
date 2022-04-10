@@ -15,6 +15,31 @@ Expense is simple entity that has Price (non zero) stored in subunit, currency s
 
 * Run `composer install`
 
+* Run `php bin/console doctrine:migrations:migrate`
+
+## Test API
+Using Postman Or any other client test APIs:
+#### * Listing
+@GET /expenses
+    - page: 0 or greater
+    - countPerPage: 1 or greater
+#### * Show item
+@GET /expenses/{id}
+
+#### * Create Item
+@POST /expenses
+    - description (10000 Char)
+    - Price (decimal > 0)
+    - Currency (ISO Code)
+    - Type (see enum ExpenseType)
+#### * Update Item
+@PUT /expenses/{id}
+    - description (10000 Char)
+    - Price (decimal > 0)
+    - Currency (ISO Code)
+    - Type (see enum ExpenseType)
+#### * Delete item
+@DELETE /expenses/{id}
 ## Tests
 To Run tests run:
 `./run-test.sh`
