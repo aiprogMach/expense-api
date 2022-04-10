@@ -1,0 +1,17 @@
+vendor
+.env
+.env.test
+.env.local
+.env.production
+.env.staging
+var/cache
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
